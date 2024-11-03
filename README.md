@@ -10,9 +10,13 @@ Consulta de cidade por CEP: Utiliza a API ViaCEP para converter um CEP em uma ci
 Consulta de temperatura por cidade: Utiliza a API WeatherAPI para obter a temperatura atual de uma cidade.
 Conversão de temperatura: Converte a temperatura de Celsius para Fahrenheit e Kelvin.
 
-Endpoints
+### Endpoints
 GET /weather?cep={CEP}
 Este endpoint recebe um CEP como parâmetro de query e retorna a temperatura na cidade correspondente.
+
+### Como executar a aplicação no Cloud Run:
+
+https://go-desafio-clima-tempo-a2citvtfgq-uc.a.run.app/weather?cep=50050200
 
 Body de retorno
 
