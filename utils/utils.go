@@ -12,5 +12,5 @@ func ConverToFahrenheit(celsius float64) float64 {
 }
 
 func ConverToKelvin(celsius float64) float64 {
-	return celsius + 273
+	return celsius + 273.15
 }
