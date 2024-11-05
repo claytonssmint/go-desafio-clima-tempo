@@ -1,6 +1,7 @@
 package services
 
 import (
+	"crypto/tls"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -19,7 +20,13 @@ type WeatherAPIResponse struct {
 }
 
 func GetCityByCEP(cep string) (string, error) {
-	resp, err := http.Get(fmt.Sprintf("https://viacep.com.br/ws/%s/json/", cep))
+
+	client := &http.Client{
+		Transport: &http.Transport{
+			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+		},
+	}
+	resp, err := client.Get(fmt.Sprintf("https://viacep.com.br/ws/%s/json/", cep))
 	if err != nil {
 		return "", err
 	}

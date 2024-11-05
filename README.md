@@ -16,7 +16,7 @@ Este endpoint recebe um CEP como parâmetro de query e retorna a temperatura na 
 
 ### Como executar a aplicação no Cloud Run:
 
-https://go-desafio-clima-tempo-a2citvtfgq-uc.a.run.app/weather?cep=50050200
+https://go-desafio-clima-tempo-a2citvtfgq-uc.a.run.app/weather?cep=50050201
 
 Body de retorno
 
